@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+    <style>
+        body {
+            background-color: #3670E0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: white;
+        }
+        
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .search-input {
+            padding: 10px;
+            width: 300px;
+            font-size: 16px;
+        }
+        
+        .search-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .category-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .category {
+            width: 23%;
+            background-color: #3670E0;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+        p{
+          color: white;
+          background-color: black;
+          padding: 3px;
+        }
+        
+        .category img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MENU</h1>
+        
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button">Search</button>
+        </div>
+        
+        <div class="category-container">
+            <div class="category">
+                <a href="fashion.html">
+                    <img src="fasion.png" alt="Fashion">
+                    <p>Fashion</p>
+                </a>
+            </div>
+            
+            <div class="category">
+                <a href="kitchen.html">
+                    <img src="kitchen.png" alt="Kitchen">
+                    <p>Kitchen</p>
+                </a>
+            </div>
+            
+            <div class="category">
+                <a href="electronics.html">
+                    <img src="electronics.png" alt="Electronics">
+                    <p>Electronics</p>
+                </a>
+            </div>
+            
+            <div class="category">
+                <a href="food.html">
+                    <img src="tamu.png" alt="Food">
+                    <p>Food</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

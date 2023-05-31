@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment</title>
+  <style>
+    body {
+            background-color: #3670E0;
+            font-family: Arial, sans-serif;
+        }
+  </style>
+  <link rel="stylesheet" type="text/css" href="pay.css">
+</head>
+<body>
+  <header>
+    <h1>Payment</h1>
+  </header>
+
+  <section>
+    <h2>Select Payment Method</h2>
+    <p>Trusted Payment. 100% Money Back Guarantee.</p>
+    <form>
+      <div class="payment-option">
+        <input type="radio" id="mpesa" name="paymentMethod" value="mpesa">
+        <label for="mpesa">M-Pesa</label>
+      </div>
+      <div class="payment-option">
+        <input type="radio" id="card" name="paymentMethod" value="card">
+        <label for="card">Visa/MasterCard</label>
+      </div>
+      <div class="payment-option">
+        <input type="radio" id="account" name="paymentMethod" value="account">
+        <label for="account">Account Balance</label>
+      </div>
+      <div class="payment-option">
+        <input type="radio" id="request" name="paymentMethod" value="request">
+        <label for="request">Request a Friend to Pay</label>
+      </div>
+      <button type="submit">Make Payment</button>
+    </form>
+  </section>
+</body>
+</html>

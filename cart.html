@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shopping Cart</title>
+  <style>
+    body {
+            background-color: #3670E0;
+            font-family: Arial, sans-serif;
+        }
+        p{
+          color: white;
+        }
+  </style>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1> Cart</h1>
+  </header>
+
+  <section>
+    <div class="cart-item">
+      <img src="iph1.jpeg" alt="Product Image" height="300" >
+      <img src="iph2.jpeg" alt="Product Image" height="300">
+      <img src="iph3.jpeg" alt="Product Image" height="300">
+      <div class="item-details">
+        <p>Apple IPhone 14 Pro Max - 256 GB, Space Black Physical Sim With E-Sim</p>
+        <p>Price: KSH 202999</p>
+        <p>Tax: KSH 1000</p>
+      </div>
+      <div class="item-quantity">
+        <button class="quantity-btn minus">-</button>
+        <span class="quantity">1</span>
+        <button class="quantity-btn plus">+</button>
+      </div>
+    </div>
+    <div class="cart-total">
+      <p>Total Price: KSH 203999</p>
+    </div>
+    <div>
+        <a href="payment.html"><button class="product-button">CHECKOUT</button></a>
+    </div>
+  </section>
+
+  <script src="script.js">
+  // Get the quantity element
+var quantityElement = document.querySelector('.quantity');
+
+// Get the minus and plus buttons
+var minusButton = document.querySelector('.minus');
+var plusButton = document.querySelector('.plus');
+
+// Get the cart total element
+var cartTotalElement = document.querySelector('.cart-total p');
+
+// Get the initial quantity and price
+var quantity = parseInt(quantityElement.textContent);
+var price = 202999; // Change this to the actual price
+
+// Calculate the total price
+var total = calculateTotal(quantity, price);
+
+// Update the total price element
+cartTotalElement.textContent = 'Total Price: $' + total;
+
+// Add event listener for the minus button
+minusButton.addEventListener('click', function() {
+  if (quantity > 1) {
+    quantity--;
+    quantityElement.textContent = quantity;
+    total = calculateTotal(quantity, price);
+    cartTotalElement.textContent = 'Total Price: $' + total;
+  }
+});
+
+// Add event listener for the plus button
+plusButton.addEventListener('click', function() {
+  quantity++;
+  quantityElement.textContent = quantity;
+  total = calculateTotal(quantity, price);
+  cartTotalElement.textContent = 'Total Price: $' + total;
+});
+
+// Function to calculate the total price
+function calculateTotal(quantity, price) {
+  var tax = 1000; // Change this to the actual tax amount
+  return (quantity * price) + tax;
+}
+</script>
+
+</body>
+</html>

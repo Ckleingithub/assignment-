@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign Up - WIBER</title>
+
+  <link rel="stylesheet" type="text/css" href="ck.css">
+</head>
+<body>
+  <div class="signup-container">
+    <h1 class="company-title">WIBER</h1>
+    <form class="signup-form" action="signup.php" method="post">
+      <h2>Create an Account</h2>
+      <div class="form-group">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" placeholder="Enter your full name" required name="fullname">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required name="email">
+      </div>
+      <div class="form-group">
+        <label>Gender:</label>
+        <label for="male">
+          <input type="radio" id="male" name="gender" value="male" required> Male
+        </label>
+        <label for="female">
+          <input type="radio" id="female" name="gender" value="female" required> Female
+        </label>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" required name="password">
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" placeholder="Confirm your password" required name="confirm-password">
+      </div>
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
