@@ -15,7 +15,7 @@
 </head>
 <body>
   <header>
-    <h1> Cart</h1>
+    
   </header>
 
   <section>
@@ -25,7 +25,7 @@
       <img src="iph3.jpeg" alt="Product Image" height="300">
       <div class="item-details">
         <p>Apple IPhone 14 Pro Max - 256 GB, Space Black Physical Sim With E-Sim</p>
-        <p>Price: KSH 202999</p>
+        <p>Price: KSH 199999</p>
         <p>Tax: KSH 1000</p>
       </div>
       <div class="item-quantity">
@@ -35,7 +35,7 @@
       </div>
     </div>
     <div class="cart-total">
-      <p>Total Price: KSH 203999</p>
+      <p>Total Price: KSH 200999</p>
     </div>
     <div>
         <a href="payment.html"><button class="product-button">CHECKOUT</button></a>
@@ -57,13 +57,12 @@ var cartTotalElement = document.querySelector('.cart-total p');
 var quantity = parseInt(quantityElement.textContent);
 var price = 202999; // Change this to the actual price
 
-// Calculate the total price
+
 var total = calculateTotal(quantity, price);
 
-// Update the total price element
 cartTotalElement.textContent = 'Total Price: $' + total;
 
-// Add event listener for the minus button
+
 minusButton.addEventListener('click', function() {
   if (quantity > 1) {
     quantity--;
@@ -73,7 +72,6 @@ minusButton.addEventListener('click', function() {
   }
 });
 
-// Add event listener for the plus button
 plusButton.addEventListener('click', function() {
   quantity++;
   quantityElement.textContent = quantity;
@@ -81,7 +79,7 @@ plusButton.addEventListener('click', function() {
   cartTotalElement.textContent = 'Total Price: $' + total;
 });
 
-// Function to calculate the total price
+
 function calculateTotal(quantity, price) {
   var tax = 1000; // Change this to the actual tax amount
   return (quantity * price) + tax;
